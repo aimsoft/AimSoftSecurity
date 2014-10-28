@@ -1,0 +1,96 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="AimExchange.Site" %>
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="cc1" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="CSS/StyleMaster.css" rel="stylesheet" type="text/css" />
+    <%--<link href="CSS/Style.css" rel="stylesheet" type="text/css" />--%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+</head>
+<body>
+    <form id="Form1" runat="server">
+    <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+    <div class="page1">
+        <div class="header">
+            <div class="title">
+                <h1>
+                    Aim Security Managment
+                </h1>
+            </div>
+            <div class="loginDisplay">
+            Welcome <span class="bold">Rizwan</span>!
+            <asp:LinkButton ID="lbtnLogout" runat="server">Log out</asp:LinkButton>
+                <%--<asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
+                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
+                    </LoggedInTemplate>
+                </asp:LoginView>--%>
+            </div>
+            <div class="clear hideSkiplink">
+                
+            </div>
+        </div>
+        <div class="main">
+        <div class="treeview">
+        <div Class="menu">
+
+
+            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+                <asp:TreeView ID="TreeView1" runat="server">
+                <Nodes>
+                <asp:TreeNode Text="Home" Value="Home"  NavigateUrl="~/CreateUser.aspx">
+                    <asp:TreeNode Text="Home1" Value="Home1" NavigateUrl="~/CreateUser.aspx">
+                     <asp:TreeNode Text="Contact Us" Value="Contact Us"  NavigateUrl="~/CreateUser.aspx"></asp:TreeNode></asp:TreeNode>
+                </asp:TreeNode>
+                <asp:TreeNode Text="Back Office" Value="Back Office"  NavigateUrl="~/CreateUser.aspx">
+                    <asp:TreeNode Text="Reports" Value="Reports"  NavigateUrl="~/CreateUser.aspx"></asp:TreeNode>
+                </asp:TreeNode>
+                <asp:TreeNode Text="Front Office" Value="Front Office"  NavigateUrl="~/CreateUser.aspx">
+                    <asp:TreeNode Text="Imprest" Value="Imprest"  NavigateUrl="~/CreateUser.aspx"></asp:TreeNode>
+                </asp:TreeNode>
+               
+            </Nodes>
+                </asp:TreeView>
+                        </ContentTemplate>
+                        </asp:UpdatePanel>
+        </div>
+        <%--<asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="vertical">
+                     
+                    <Items>
+                       
+                        <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Login"/>
+                        <asp:MenuItem NavigateUrl="~/Main.aspx" Text="Main"/>
+                    </Items>
+                </asp:Menu>--%>
+
+        </div>
+        
+        <div class="mainplaceholder">
+        
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+            
+            </div>
+            <div class="divButton">
+                <asp:ContentPlaceHolder ID="PlaceHolderButton" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+         <p>All Right Reserve <a href="#">AimSoft Technologies</a></p>
+    </div>
+    </form>
+</body>
+</html>

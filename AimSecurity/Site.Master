@@ -27,15 +27,6 @@
             <div class="loginDisplay">
             Welcome <span class="bold">Rizwan</span>!
             <asp:LinkButton ID="lbtnLogout" runat="server">Log out</asp:LinkButton>
-                <%--<asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
-                    <AnonymousTemplate>
-                        [ <a href="~/Account/Login.aspx" ID="HeadLoginStatus" runat="server">Log In</a> ]
-                    </AnonymousTemplate>
-                    <LoggedInTemplate>
-                        Welcome <span class="bold"><asp:LoginName ID="HeadLoginName" runat="server" /></span>!
-                        [ <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out" LogoutPageUrl="~/"/> ]
-                    </LoggedInTemplate>
-                </asp:LoginView>--%>
             </div>
             <div class="clear hideSkiplink">
                 
@@ -45,20 +36,26 @@
         <div class="treeview">
         <div Class="menu">
           
-                <asp:TreeView ID="TreeView1" runat="server">
+                <asp:TreeView ID="TreeView1" runat="server" ImageSet="Arrows">
+                    <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
                 <Nodes>
-                <asp:TreeNode Text="Home" Value="Home"  NavigateUrl="~/CreateUser.aspx">
-                    <asp:TreeNode Text="Home1" Value="Home1" NavigateUrl="~/CreateUser.aspx">
-                     <asp:TreeNode Text="Contact Us" Value="Contact Us"  NavigateUrl="~/CreateUser.aspx"></asp:TreeNode></asp:TreeNode>
+                <asp:TreeNode Text="Home" Value="Home"  NavigateUrl="~/Web/CreateUser.aspx">
+                    <asp:TreeNode Text="Home1" Value="Home1" NavigateUrl="~/Web/CreateUser.aspx">
+                     <asp:TreeNode Text="Contact Us" Value="Contact Us"  NavigateUrl="~/Web/CreateUser.aspx"></asp:TreeNode></asp:TreeNode>
                 </asp:TreeNode>
-                <asp:TreeNode Text="Back Office" Value="Back Office"  NavigateUrl="~/CreateUser.aspx">
-                    <asp:TreeNode Text="Reports" Value="Reports"  NavigateUrl="~/CreateUser.aspx"></asp:TreeNode>
+                <asp:TreeNode Text="Back Office" Value="Back Office"  NavigateUrl="~/Web/CreateUser.aspx">
+                    <asp:TreeNode Text="Reports" Value="Reports"  NavigateUrl="~/Web/CreateUser.aspx"></asp:TreeNode>
                 </asp:TreeNode>
-                <asp:TreeNode Text="Front Office" Value="Front Office"  NavigateUrl="~/CreateUser.aspx">
-                    <asp:TreeNode Text="Imprest" Value="Imprest"  NavigateUrl="~/CreateUser.aspx"></asp:TreeNode>
+                <asp:TreeNode Text="Front Office" Value="Front Office"  NavigateUrl="~/Web/CreateUser.aspx">
+                    <asp:TreeNode Text="Imprest" Value="Imprest"  NavigateUrl="~/Web/CreateUser.aspx"></asp:TreeNode>
                 </asp:TreeNode>
                
             </Nodes>
+                    <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" 
+                        HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                    <ParentNodeStyle Font-Bold="False" />
+                    <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" 
+                        HorizontalPadding="0px" VerticalPadding="0px" />
                 </asp:TreeView>
                     
             

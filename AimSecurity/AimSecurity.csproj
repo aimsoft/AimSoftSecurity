@@ -54,6 +54,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web\Applications.aspx" />
+    <Content Include="CS.aspx" />
+    <Content Include="images\collapse.png" />
+    <Content Include="images\collapse1.png" />
+    <Content Include="images\expand.png" />
+    <Content Include="images\expand1.png" />
+    <Content Include="js\jquery-1.11.1.js" />
+    <Content Include="SamplePage.aspx" />
     <Content Include="Web\CreateUser.aspx" />
     <Content Include="CSS\hover.css" />
     <Content Include="CSS\StyleMaster.css" />
@@ -83,6 +90,15 @@
     </Compile>
     <Compile Include="Web\Applications.aspx.designer.cs">
       <DependentUpon>Applications.aspx</DependentUpon>
+    <Compile Include="CS.aspx.cs">
+      <DependentUpon>CS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SamplePage.aspx.cs">
+      <DependentUpon>SamplePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SamplePage.aspx.designer.cs">
+      <DependentUpon>SamplePage.aspx</DependentUpon>
     </Compile>
     <Compile Include="Web\CreateUser.aspx.cs">
       <DependentUpon>CreateUser.aspx</DependentUpon>

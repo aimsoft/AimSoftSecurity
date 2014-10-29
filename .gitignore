@@ -44,3 +44,12 @@ Temporary Items
 
 AimSecurity/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 *.cache
+*.cache
+*.cache
+*.dll
+*.pdb
+*.pdb
+*.txt
+AimSecurity/obj/Debug/AimExchange.dll
+*.pdb
+*.dll

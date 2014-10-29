@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="..//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 </head>
-<body>
+<body style="background: #0ca3d2;">
 <div class="main_heading">
 <h1>Aim Security Managment</h1>
 </div>

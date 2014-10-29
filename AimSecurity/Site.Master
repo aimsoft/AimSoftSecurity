@@ -14,8 +14,7 @@
 </head>
 <body>
     <form id="Form1" runat="server">
-    <asp:ScriptManager ID="ScriptManager1" runat="server">
-    </asp:ScriptManager>
+
     <div class="page1">
         <div class="header">
             <div class="title">
@@ -45,8 +44,7 @@
         <div Class="menu">
 
 
-            <asp:UpdatePanel ID="UpdatePanel1" runat="server">
-            <ContentTemplate>
+ 
                 <asp:TreeView ID="TreeView1" runat="server">
                 <Nodes>
                 <asp:TreeNode Text="Home" Value="Home"  NavigateUrl="~/CreateUser.aspx">
@@ -62,8 +60,7 @@
                
             </Nodes>
                 </asp:TreeView>
-                        </ContentTemplate>
-                        </asp:UpdatePanel>
+               
         </div>
         <%--<asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="vertical">
                      

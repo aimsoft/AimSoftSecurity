@@ -14,3 +14,9 @@ D:\Projects\GitHub\AimSoftSecurity\AimSecurity\bin\AimExchange.pdb
 D:\Projects\GitHub\AimSoftSecurity\AimSecurity\obj\Debug\AimSecurity.csprojResolveAssemblyReference.cache
 D:\Projects\GitHub\AimSoftSecurity\AimSecurity\obj\Debug\AimExchange.dll
 D:\Projects\GitHub\AimSoftSecurity\AimSecurity\obj\Debug\AimExchange.pdb
+E:\Project\GitHub\AimSoftSecurity\AimSecurity\bin\AimExchange.dll
+E:\Project\GitHub\AimSoftSecurity\AimSecurity\bin\AimExchange.pdb
+E:\Project\GitHub\AimSoftSecurity\AimSecurity\bin\AjaxControlToolkit.dll
+E:\Project\GitHub\AimSoftSecurity\AimSecurity\obj\Debug\AimSecurity.csprojResolveAssemblyReference.cache
+E:\Project\GitHub\AimSoftSecurity\AimSecurity\obj\Debug\AimExchange.dll
+E:\Project\GitHub\AimSoftSecurity\AimSecurity\obj\Debug\AimExchange.pdb

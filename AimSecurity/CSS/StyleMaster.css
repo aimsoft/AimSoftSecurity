@@ -127,6 +127,8 @@ first child of the left and right table columns */
     padding: 0px;
     background: #2B7AA7;
     width: 100%;
+    
+    
 }
 
 .header h1
@@ -407,3 +409,64 @@ table:hover {
   background: #92D2F7;
   text-decoration: none;
 }
+
+
+
+
+/*Accordion and Collapse Panel*/
+
+ .cpHeader
+        {
+            color: white;
+            background-color: #5AB3E5;
+            font: bold 11px auto "Trebuchet MS" , Verdana;
+            font-size: 12px;
+            cursor:pointer; /*height: 10px;*/
+            padding: 10px;
+            margin: 15px 15px 0 5%;
+            width: 80%;
+            background: #2db9f0;
+background: -moz-linear-gradient(left, #2db9f0 0%, #96dae3 30%, #beeefa 50%, #93e7ed 70%, #31b1e0 100%);
+background: -webkit-gradient(left top, right top, color-stop(0%, #2db9f0), color-stop(30%, #96dae3), color-stop(50%, #beeefa), color-stop(70%, #93e7ed), color-stop(100%, #31b1e0));
+background: -webkit-linear-gradient(left, #2db9f0 0%, #96dae3 30%, #beeefa 50%, #93e7ed 70%, #31b1e0 100%);
+background: -o-linear-gradient(left, #2db9f0 0%, #96dae3 30%, #beeefa 50%, #93e7ed 70%, #31b1e0 100%);
+background: -ms-linear-gradient(left, #2db9f0 0%, #96dae3 30%, #beeefa 50%, #93e7ed 70%, #31b1e0 100%);
+background: linear-gradient(to right, #2db9f0 0%, #96dae3 30%, #beeefa 50%, #93e7ed 70%, #31b1e0 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2db9f0', endColorstr='#31b1e0', GradientType=1 );
+        }
+        .cpHeader a
+        {
+            color: white !important;
+            text-decoration: none;
+        }
+        .cpBody
+        {
+            background-color: #F3F3F3;
+            font: normal 11px auto Verdana, Arial;
+            border: 1px gray;
+            padding: 10px;
+            padding-top: 15px;
+            margin: 0px 15px 15px 5%;
+            width: 80%;
+        }
+        .pm
+        {
+            width: 15px;
+            float: right;
+        }
+        
+        
+        /* accordion*/
+        
+        
+        
+        .href
+        {
+            color: #ffffff !important;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        
+/*Accordion and Collapse Panel End*/
+

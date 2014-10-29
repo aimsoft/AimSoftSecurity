@@ -53,6 +53,9 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="images\collapse.png" />
+    <Content Include="images\expand.png" />
+    <Content Include="js\jquery-1.11.1.js" />
     <Content Include="Web\CreateUser.aspx" />
     <Content Include="CSS\hover.css" />
     <Content Include="CSS\StyleMaster.css" />

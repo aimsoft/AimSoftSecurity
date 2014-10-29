@@ -10,106 +10,40 @@
             font-family: Arial;
             font-size: 10pt;
         }
-        .Grid td
+        .GridPager a, .GridPager span
+        {
+            display: block;
+            height: 15px;
+            width: 15px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+        }
+        .GridPager a
+        {
+            background-color: #f5f5f5;
+            color: #969696;
+            border: 1px solid #969696;
+        }
+        .GridPager span
         {
             background-color: #A1DCF2;
-            color: black;
-            font-size: 10pt;
-            line-height: 200%;
-        }
-        .Grid th
-        {
-            background-color: #3AC0F2;
-            color: White;
-            font-size: 10pt;
-            line-height: 200%;
-        }
-        .ChildGrid td
-        {
-            background-color: #eee !important;
-            color: black;
-            font-size: 10pt;
-            line-height: 200%;
-        }
-        .ChildGrid th
-        {
-            background-color: #6C6C6C !important;
-            color: White;
-            font-size: 10pt;
-            line-height: 200%;
-        }
-        .Nested_ChildGrid td
-        {
-            background-color: #fff !important;
-            color: black;
-            font-size: 10pt;
-            line-height: 200%;
-        }
-        .Nested_ChildGrid th
-        {
-            background-color: #2B579A !important;
-            color: White;
-            font-size: 10pt;
-            line-height: 200%;
+            color: #000;
+            border: 1px solid #3AC0F2;
         }
     </style>
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-    <script type="text/javascript">
-        $(function () {
-            $("[id*=imgOrdersShow]").each(function () {
-                if ($(this)[0].src.indexOf("minus") != -1) {
-                    $(this).closest("tr").after("<tr><td></td><td colspan = '999'>" + $(this).next().html() + "</td></tr>");
-                    $(this).next().remove();
-                }
-            });
-            $("[id*=imgProductsShow]").each(function () {
-                if ($(this)[0].src.indexOf("minus") != -1) {
-                    $(this).closest("tr").after("<tr><td></td><td colspan = '999'>" + $(this).next().html() + "</td></tr>");
-                    $(this).next().remove();
-                }
-            });
-        });
-    </script>
 </head>
 <body>
     <form id="form1" runat="server">
-    <asp:GridView ID="gvCustomers" runat="server" AutoGenerateColumns="false" CssClass="Grid"
-        DataKeyNames="CustomerID">
+    <asp:GridView ID="GridView1" HeaderStyle-BackColor="#3AC0F2" HeaderStyle-ForeColor="White"
+        RowStyle-BackColor="#A1DCF2" AlternatingRowStyle-BackColor="White" AlternatingRowStyle-ForeColor="#000"
+        runat="server" AutoGenerateColumns="false" AllowPaging="true" OnPageIndexChanging="OnPageIndexChanging">
         <Columns>
-            <asp:TemplateField>
-                <ItemTemplate>
-                    <asp:ImageButton ID="imgOrdersShow" runat="server" OnClick="Show_Hide_OrdersGrid"
-                        ImageUrl="~/images/plus.png" CommandArgument="Show" />
-                    <asp:Panel ID="pnlOrders" runat="server" Visible="false" Style="position: relative">
-                        <asp:GridView ID="gvOrders" runat="server" AutoGenerateColumns="false" PageSize="5"
-                            AllowPaging="true" OnPageIndexChanging="OnOrdersGrid_PageIndexChanging" CssClass="ChildGrid"
-                            DataKeyNames="OrderId">
-                            <Columns>
-                                <asp:TemplateField>
-                                    <ItemTemplate>
-                                        <asp:ImageButton ID="imgProductsShow" runat="server" OnClick="Show_Hide_ProductsGrid"
-                                            ImageUrl="~/images/plus.png" CommandArgument="Show" />
-                                        <asp:Panel ID="pnlProducts" runat="server" Visible="false" Style="position: relative">
-                                            <asp:GridView ID="gvProducts" runat="server" AutoGenerateColumns="false" PageSize="2"
-                                                AllowPaging="true" OnPageIndexChanging="OnProductsGrid_PageIndexChanging" CssClass="Nested_ChildGrid">
-                                                <Columns>
-                                                    <asp:BoundField ItemStyle-Width="150px" DataField="ProductId" HeaderText="Product Id" />
-                                                    <asp:BoundField ItemStyle-Width="150px" DataField="ProductName" HeaderText="Product Name" />
-                                                </Columns>
-                                            </asp:GridView>
-                                        </asp:Panel>
-                                    </ItemTemplate>
-                                </asp:TemplateField>
-                                <asp:BoundField ItemStyle-Width="150px" DataField="OrderId" HeaderText="Order Id" />
-                                <asp:BoundField ItemStyle-Width="150px" DataField="OrderDate" HeaderText="Date" />
-                            </Columns>
-                        </asp:GridView>
-                    </asp:Panel>
-                </ItemTemplate>
-            </asp:TemplateField>
-            <asp:BoundField ItemStyle-Width="150px" DataField="ContactName" HeaderText="Contact Name" />
-            <asp:BoundField ItemStyle-Width="150px" DataField="City" HeaderText="City" />
+            <asp:BoundField DataField="ContactName" HeaderText="Contact Name" ItemStyle-Width="150px" />
+            <asp:BoundField DataField="City" HeaderText="City" ItemStyle-Width="100px" />
+            <asp:BoundField DataField="Country" HeaderText="Country" ItemStyle-Width="100px" />
         </Columns>
+        <PagerStyle HorizontalAlign="Right" CssClass="GridPager" />
     </asp:GridView>
     </form>
 </body>

@@ -92,6 +92,7 @@
       <DependentUpon>Applications.aspx</DependentUpon>
     <Compile Include="CS.aspx.cs">
       <DependentUpon>CS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SamplePage.aspx.cs">
       <DependentUpon>SamplePage.aspx</DependentUpon>

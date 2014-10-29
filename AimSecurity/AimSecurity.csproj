@@ -54,7 +54,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="CreateUser.aspx" />
-    <Content Include="CSS\hover.css" />
     <Content Include="CSS\StyleMaster.css" />
     <Content Include="Home.aspx" />
     <Content Include="images\btnAdd.png" />

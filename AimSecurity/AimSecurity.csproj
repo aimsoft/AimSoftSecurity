@@ -90,6 +90,7 @@
     </Compile>
     <Compile Include="Web\Applications.aspx.designer.cs">
       <DependentUpon>Applications.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CS.aspx.cs">
       <DependentUpon>CS.aspx</DependentUpon>
     </Compile>
